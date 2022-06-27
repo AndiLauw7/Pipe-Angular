@@ -1,0 +1,10 @@
+<H1>Biodata</H1>
+<!-- <p>{{ biodata.id + "." + " " + biodata.name }}</p> -->
+{{ biodata.name | uppercase }}
+<p>{{ biodata.gender | uppercase }}</p>
+<p>{{ biodata.birthday | date: "medium" }}</p>
+<p>{{ biodata.assets | currency: "Rp. " }}</p>
+<p>
+    {{ biodata.phone | slice: 0:3 }} - {{ biodata.phone | slice: 3:6 }} - {{ biodata.phone | slice: 6 }}
+</p>
+<p>Pesen {{ " " + biodata.limit | percent: "2.2" }}</p>
